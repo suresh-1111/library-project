@@ -1,0 +1,192 @@
+.title-div {
+	display: flex;
+	position: relative;
+	gap: 15px;
+	top: 25px;
+	left: -260px;
+}
+.logo {
+	height: 65px;
+	width: 55px;
+}
+.title-div h1 {
+	color:maroon;
+	font-size: 1.3rem;
+
+}
+.title-div p {
+	font-size: medium;
+}
+.heading {
+	display: block;
+	position: absolute;
+	top: 140px;
+	background: #121fcf;
+	background: linear-gradient(to right, #121fcf 0%, #910f0d 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 2.5rem
+}
+.clock-div {
+	background-color: #fff;
+	width: 250px;
+	height: 80px;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	position: fixed;
+	right: 0px;
+	pointer-events: none;
+	user-select: none;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.date-div {
+	margin-bottom: -3px;
+}
+.day {
+	margin-right: 5px;
+	animation: neonAnim 2s alternate-reverse infinite;
+	color: #007bff;
+	font-family: Bahnschrift;
+	font-size: 1rem;
+}
+@keyframes neonAnim {
+	from {
+		text-shadow: 0 0 30px rgba(0, 123, 255, 0.7),
+			0 0 60px rgba(0, 123, 255, 0.7), 0 0 120px rgba(0, 123, 255, 0.7);
+	}
+	to {
+		text-shadow: 0 0 25px rgba(0, 123, 255, 0.7),
+			0 0 40px rgba(0, 123, 255, 0.7), 0 0 80px rgba(0, 123, 255, 0.7);
+	}
+}
+.date {
+	margin-left: 5px;
+	animation: neonAnim 2s alternate-reverse infinite;
+	color: #007bff;
+	font-family: consolas;
+	font-size: 1rem;
+}
+@keyframes neonAnim {
+	from {
+		text-shadow: 0 0 30px rgba(0, 123, 255, 0.7),
+			0 0 60px rgba(0, 123, 255, 0.7), 0 0 120px rgba(0, 123, 255, 0.7);
+	}
+	to {
+		text-shadow: 0 0 25px rgba(0, 123, 255, 0.7),
+			0 0 40px rgba(0, 123, 255, 0.7), 0 0 80px rgba(0, 123, 255, 0.7);
+	}
+}
+
+.time {
+	animation: neonAnim 2s alternate-reverse infinite;
+	color: #007bff;
+	font-family: consolas;
+	font-size: 2rem;
+}
+@keyframes neonAnim {
+	from {
+		text-shadow: 0 0 30px rgba(0, 123, 255, 0.7),
+			0 0 60px rgba(0, 123, 255, 0.7), 0 0 120px rgba(0, 123, 255, 0.7);
+	}
+	to {
+		text-shadow: 0 0 25px rgba(0, 123, 255, 0.7),
+			0 0 40px rgba(0, 123, 255, 0.7), 0 0 80px rgba(0, 123, 255, 0.7);
+	}
+}
+.main-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.input-div {
+	background-color: #fff;
+	opacity: 0.99;
+	margin-top: 250px;
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+	user-select: none;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.form-group {
+	transition: all 0.15s;
+}
+.form-label {
+	font-size: 1em;
+	color: #aaa;
+	display: block;
+	opacity: 1;
+	transform: translateY(-1.8em);
+	transition: all 0.2s;
+	text-align: center;
+	pointer-events: none; /* This is very important to disable the event on label*/
+}
+
+.form-control {
+	box-shadow: none;
+	background-color: rgba(0, 0, 0, 0.02);
+	border-radius: 0px;
+	border-color: #ccc;
+	background-color: transparent;
+	border-style: none none solid none;
+	width: 200px;
+	transition: all 0.2s;
+	padding: 5px;
+	text-align: center;
+	font-weight: 600;
+	margin-top: 15px;
+	caret-color: #16a085;
+}
+.form-control::placeholder {
+	color: transparent;
+}
+.form-control:focus {
+	box-shadow: none;
+	outline: none;
+	border-color: rgb(35, 236, 9);
+}
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+	transform: translateY(-3em) scale(0.85);
+}
+.form-group:focus-within {
+	transform: scale(1.05, 1.05);
+}
+
+.btn {	background-image: linear-gradient(
+		to right,
+		#16a085 0%,
+		#f4d03f 51%,
+		#16a085 100%
+	);
+	
+	margin-left: 60px;
+	padding: 5px 15px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+	border: 0.5px solid grey;
+}
+
+.btn:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
